@@ -1,5 +1,14 @@
-function IngredientList() {
-   return;
+function IngredientList({ingredients}) {
+  let key = 0;
+   return <div>
+    <h3>Ingredients</h3>
+    <ol>
+
+      {ingredients.map(ingredient => {
+        <li key={ingredient + key++}>{ingredient}</li>
+      })}
+    </ol>
+   </div>
  }
  
  export default IngredientList;
